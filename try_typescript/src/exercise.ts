@@ -28,3 +28,33 @@ const student:Student = {
     inClassRoom: true
 }
 console.log(student);
+
+// 3
+function sum_fn(left:number, right:number):number{
+    const sum:number = left + right;
+    return sum;
+}
+const sum_arrow: (left:number, right:number) => number = (left, right) => {
+    const sum:number = left + right;
+    return sum;
+}
+
+// 4
+function push_gen<T>(array: T[], item: T): T[]{
+    array.push(item); 
+    return array;
+}
+console.log(push_gen<string>(["abc", "def"], "def"));
+console.log(push_gen<number>([123, 456], 789));
+
+// 5
+export {
+    str,
+    num,
+    bool,
+    ary,
+    Student,
+    sum_fn,
+    sum_arrow,
+    push_gen
+}
